@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background: #ccc;
+}
+.container{
+ max-width:600px;
+ width: 100%;
+  margin:0 auto;
+  margin-top: 60px;
+  background: white;
+  border-radius: 10px;
+}
+.to-doApp{
+    padding: 20px 20px 40px;
+}
+.to-doApp h2{
+    padding:20px;
+}
+.input-btn{
+    position:relative;
+    width: 100%;
+    
+}
+#text{
+    width: 100%;
+    padding-right: 50%;
+   background: #ccc;
+   border: none;
+   font-size:15px ;
+}
+#btn{
+     background: rgb(255, 90, 7);
+    position: absolute;
+    width:30% ;
+    right: 0;
+    top:50%;
+    transform: translateY(-50%);
+    border: none;
+    outline: none;
+    color:white;
+    font-size: 15px;
+}
+#text,#btn{
+    padding: 12px;
+    border-radius: 20px;
+}
+#list-container{
+    margin:20px
+}
+#list-container li{
+    list-style:none;
+    padding:12px 8px 12px 50px;
+    font-size: 20px;
+    line-height: 1.5;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+#list-container li::before {
+    content: '';
+    position: absolute;
+    height: 20px; 
+    width: 20px; 
+    border-radius: 50%;
+    background-image: url(https://cdn-icons-png.flaticon.com/128/15469/15469533.png);
+    background-size: cover;
+    background-position: center;
+    top: 50%; 
+    left: 20px; 
+    transform: translateY(-50%); 
+}
+#list-container li.checked{
+    color: rgb(26, 20, 13);
+    text-decoration: line-through;
+}
+#list-container li.checked::before{
+    background-image:url(https://cdn-icons-png.flaticon.com/128/711/711239.png) ;
+
+}
+
+#list-container li .delete-btn{
+position: absolute;
+right:0;
+top:4px;
+width: 40px;
+height: 40px;
+font-size: 30px;
+color: rgb(26, 20, 13);
+line-height: 40px;
+text-align: center;
+border-radius: 50%;
+}
+#list-container li .delete-btn:hover{
+ background: #edeef0;
+}
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+        margin-top: 20px;
+    }
+}
